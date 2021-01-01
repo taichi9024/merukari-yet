@@ -4,8 +4,9 @@ Rails.application.routes.draw do
     root "top#index"
   end
 
-  namespace :customer do
+  namespace :customer, path:"" do
     root "top#index"
   end
-
+  
+  get "*hogehoge", to: "errors#index"
 end
